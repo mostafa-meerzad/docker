@@ -83,6 +83,17 @@ It is best to refer to Docker's official documentations for installation guides.
 
 ## Images vs Containers
 
+### Docker Image
+
+A Docker image is an executable application artifact which includes application **source code, dependencies, complete environment configurations, any services needed, environment variables, create directories/files etc.**
+
+### Docker Container
+
+Is a running instance of a **docker image**
+when we start the app it starts in a pre-configured environment which give us a **Container**
+
+- you can run multiple containers from an image
+
 ## Public and Private Registries
 
 ## Run Containers
