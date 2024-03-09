@@ -64,6 +64,23 @@ It offers compatibility.
 
 ## Install Docker locally
 
+It is best to refer to Docker's official documentations for installation guides.
+
+### What do we get by installing docker-desktop
+
+- docker engine:
+  - a server with a long-running daemon process **dockerd**
+  - manages containers and images
+- docker cli client
+  - command-line interface ("docker") to interact with **Docker Server**
+  - execute docker commands to start/stop.. containers
+- docker buildx
+- extensions
+- docker compose
+- docker content trust
+- kubernetes
+- credential helper
+
 ## Images vs Containers
 
 ## Public and Private Registries
