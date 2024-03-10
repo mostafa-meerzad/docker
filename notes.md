@@ -96,6 +96,25 @@ when we start the app it starts in a pre-configured environment which give us a 
 
 ## Public and Private Registries
 
+Well to run images which will give use containers first we need to get those images from somewhere Right!. that is where docker **registry** comes in
+**Docker registry** is a distribution system for docker images.
+
+official images for applications like Nodejs, Mongodb, etc. are available and maintained by software authors in collaboration with docker community.
+
+**Docker Hub** is the biggest docker-registry provided by docker and you can find official images of softwares you need.
+
+- Technology changes and new versions of apps/services release and those show up as **tags** in **docker hub** with the app/service
+
+### Pull an Image
+
+1. find the image you want to install and run locally:
+   - **Note:** picking a specific version is recommended
+2. run `docker pull {package_name}:{package_tag}` it pull an image from a registry
+   - `docker pull nginx:1.23`
+   - **Docker hub** is the default registry when you pull an **image**
+   - if you don't specify the image-version/tag docker will pull the **latest version**
+3. run `docker images` to list all local images with some info
+
 ## Run Containers
 
 ## Create Own Image (Dockerfile)
