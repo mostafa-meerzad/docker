@@ -120,7 +120,38 @@ official images for applications like Nodejs, Mongodb, etc. are available and ma
 1. run `docker run {name}:{tag}` which will create a **container** from the given image and runs it
 2. The `docker ps` command is a powerful tool in Docker that lists Docker containers.
    - this lists **container id**, **image**, **command**, **time created**, **status**, **ports**, **name**: the name is randomly generated if you don't specify
-   - `docker run -d {image}:{tag}` this command can be used to run a container in the background `-d = --detach` and prints the container-id
+3. `docker run -d {image}:{tag}` this command can be used to run a container in the background `-d = --detach` and prints the container-id
+4. you may still want to see the logs, for debugging purposes `docker logs {container_id}` view logs from service running inside the container. which are present at the time of execution.
+5. you can run docker images that are not locally installed docker **pulls** images from **docker hub** automatically
+
+### Port Binding
+
+binds container's port to the host's port to make the service available to the outside world;
+
+applications inside container runs in an **isolated docker network** which allows us to run the same running on the same port multiple times, to access the services we need to **expose** the container port to the **host** (the machine the container runs on)
+
+every service has a standard port and as a best practice we use the exact same port to expose it to;
+
+you can do that when you run a container by providing **-p** or **--publish** publishes a container port to host.
+
+`docker run -p {local_port}:{image's_port} {image_name}:{image_tag}`
+
+only one service can run on a port at a time;
+
+### Start/Stop containers
+
+`docker run {image_name}` creates a new container every time you run this command it does not reuse the previously created containers if you run `docker ps -a` **-a** or **--all** lists all containers stopped or running
+
+`docker stop {container_id}` to stop that running container gracefully
+
+`docker kill {container_id}` to stop that running container forcefully
+
+you can use **container_id** or **container_name** instead of its **id**
+
+`docker run --name {custom_name} {other flags /optional } {image_name}`
+
+### Private Docker Registries
+
 
 ## Create Own Image (Dockerfile)
 
