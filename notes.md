@@ -117,6 +117,11 @@ official images for applications like Nodejs, Mongodb, etc. are available and ma
 
 ## Run Containers
 
+1. run `docker run {name}:{tag}` which will create a **container** from the given image and runs it
+2. The `docker ps` command is a powerful tool in Docker that lists Docker containers.
+   - this lists **container id**, **image**, **command**, **time created**, **status**, **ports**, **name**: the name is randomly generated if you don't specify
+   - `docker run -d {image}:{tag}` this command can be used to run a container in the background `-d = --detach` and prints the container-id
+
 ## Create Own Image (Dockerfile)
 
 ## Main Docker commands
